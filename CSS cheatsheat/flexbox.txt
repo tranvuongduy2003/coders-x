@@ -1,0 +1,11 @@
+*display: flex;
+flex-direction: row* | column
+justify-content: flex-start* | flex-end | center | space-between | space-around | space-evenly
+align-items: flex-start | flex-end | center | baseline | stretch*
+
+apply for child /*
+	flex-basis: <length>
+	*flex-grow: 0* | <number> (important, watch back "Flexbox(part 4)")
+	flex-shrink: 1* | <number>
+	order: 0* | <number>
+*/

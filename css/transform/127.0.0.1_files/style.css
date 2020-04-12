@@ -1,0 +1,93 @@
+.landings .has-submenu {
+  position: relative;
+  display: block;
+  width: 100px;
+  line-height: 30px;
+  text-align: center;
+  color: #FFF;
+  background-color: red;
+  text-decoration: none;
+}
+
+.landings .submenu {
+  position: absolute;
+  width: 600px;
+  top: 1;
+  margin: 0;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  background-color: #666;
+  border-radius: 7px;
+  display: flex;
+  visibility: hidden;
+}
+
+.landings .pic {
+  width: 300px;
+  height: 250px;
+  margin-right: 20px;
+  background-image: url(https://picsum.photos/200/300);
+  background-size: cover;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.landings .pic .overlay {
+  position: relative;
+  height: 100%;
+  background-color: rgba(51, 94, 234, 0.8);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.landings .pic .inviting {
+  position: absolute;
+  width: 100%;
+  top: 28%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+}
+
+.landings .pic .button {
+  position: absolute;
+  text-decoration: none;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  line-height: 40px;
+  text-align: center;
+  margin-left: -60px;
+  border-radius: 5px;
+  color: rgba(51, 94, 234, 1);
+  background-color: #FFF;
+}
+
+.landings .has-submenu:hover {
+  background-color: purple;
+}
+
+.landings .has-submenu:hover ul.submenu {
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="new-item" type="text">
+    <button id="add-btn">Add</button>
+    <ul id="todo-list">
+
+    </ul>
+    <script>
+        var storageKey = 'todoList';
+        var stringData = JSON.parse(localStorage.getItem(storageKey));
+        var todoList;
+        
+        if (stringData) {
+            todoList = stringData;
+        } else {
+            todoList = [];
+        }
+
+        var addBtn = document.getElementById('add-btn');
+
+        addBtn.addEventListener('click', addItem);
+
+        function addItem() {
+            var input = document.getElementById('new-item');
+            var newItem = input.value;
+
+            todoList.push(newItem);
+
+            render();
+            
+            input.value = '';
+
+            localStorage.setItem(storageKey, JSON.stringify(todoList));
+        }
+
+        function render() {
+            var htmlList = document.getElementById('todo-list');
+            var content = todoList.map((item) => {
+                return '<li>' + item + '</li>';
+            });
+
+            htmlList.innerHTML = content.join('');
+        }
+
+        render();
+    </script>
+</body>
+</html>

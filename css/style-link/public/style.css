@@ -1,0 +1,141 @@
+.background {
+	position: relative;
+	width: 1440px;
+	height: 900px;
+	margin-left: auto;
+	margin-right: auto;  
+
+	background-image: url(./bg.svg); 
+}
+
+.main-title {
+	position: absolute;
+	width: 191px;
+	height: 65px;
+	left: 156px;
+	top: 227px;
+
+	font-family: Nunito, san-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 65px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: rgba(0, 0, 0, 0.79);
+}
+
+.introduce {
+	position: absolute;
+	width: 341px;
+	height: 23px;
+	left: 156px;
+	top: 307px;
+
+	font-family: Nunito, san-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 23px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.button {
+	position: absolute;
+	width: 130px;
+	height: 27px;
+	left: 156px;
+	top: 380px;
+	padding: 22px 36px;
+	background: #F3163E;
+	border-radius: 4px;
+	font-family: Nunito, san-serif;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 27px;
+	display: flex;
+	align-items: center;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.button:hover {
+	background: #E0153A;
+}
+
+.status {
+	position: absolute;
+	width: 272.67px;
+	height: 333.76px;
+	background: #FFFFFF;
+	border-radius: 4px;
+}
+
+.picture {
+	position: absolute;
+	width: 209.59px;
+	height: 146.02px;
+	margin: 32.94px 31.54px 0px;
+	background-image: url(./status-bg.jpeg);
+	background-size: cover; 
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+}
+
+.name {
+	position: absolute;
+	width: 142.44px;
+	height: 25.25px;
+	margin: 193.23px 65.11px 0px;
+	font-family: Source Sans Pro, san-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 23px;
+	color: #EB1C5A;
+}
+
+.content {
+	position: absolute;
+	width: 214.68px;
+	height: 65.87px;
+	margin: 232.76px 29px 35.13px; 
+
+	font-family: Source Sans Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;
+	text-align: center;
+
+	color: #000000;
+}
+
+.index1 {
+	left: 628px;
+	top: 58px;
+}
+
+.index2 {
+	left: 939.33px;
+	top: 142.54px;
+}
+
+.index3 {
+	left: 628px;
+	top: 426.9px;
+}
+
+.index4 {
+	left: 939.33px;
+	top: 509.24px;
+}
+
+
+

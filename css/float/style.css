@@ -1,0 +1,22 @@
+.header {
+	height: 100px;
+}
+
+.sidebar {
+	float: left;
+	width: 20%;
+}
+
+.main {
+	margin-left: 22%;
+}
+
+.wrapper:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.footer {
+	height: 200px;
+}

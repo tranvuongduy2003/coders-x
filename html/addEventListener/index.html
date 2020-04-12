@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="event-target">
+
+    <p>Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.</p>
+    <p id="log"></p>
+    <script>
+        const log = document.getElementById('log');
+        const eventTarget = document.getElementById('event-target');
+
+        document.addEventListener('keyup', logKey);
+
+        function logKey(e) {
+            log.textContent += ` ${e.code}`;
+        }
+    </script>
+</body>
+
+</html>

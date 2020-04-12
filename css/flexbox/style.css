@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	background-color: #DDD;
+	height: 250px;
+	justify-content: center;
+	align-items:  center;
+}
+
+.child-1 {
+	background-color: red;
+	flex-basis: 250px;
+}
+
+.child-2 {
+	background-color: green;
+}
+
+.child-3 {
+	background-color: blue;
+}

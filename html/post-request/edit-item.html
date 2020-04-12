@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input id="edit-content" type="text">
+	<button id="save-btn">Save</button>
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript">
+		var input = document.getElementById('edit-content');
+		var saveBtn = document.getElementById('save-btn');
+
+		saveBtn.addEventListener('click', saveItem);
+
+		function saveItem() {
+			var editContent = { content: input.value };
+			var getID = location.hash;
+			var id = parseInt(getID.slice(1)) + 1;
+			var url = 'http://localhost:3000/todos/' + id;
+
+			axios.put(url, editContent)
+			 .then(function() {
+			 	window.location.href = "/";
+			 });
+		}
+	</script>
+</body>
+</html>

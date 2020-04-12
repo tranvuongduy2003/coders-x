@@ -1,0 +1,77 @@
+.background {
+	position: absolute;
+	width: 411px;
+	height: 731px;
+	left: 0px;
+	top: 0px;
+
+	background-position: center; 
+	background-image: url("../../img/Night sky wallpaper.jpeg");
+}
+
+.infor-tag {
+	position: absolute;
+	width: 346px;
+	height: 108px;
+	left: 32px;
+	top: 437px;
+
+	background: #EAEAEA;
+	border-radius: 20px;
+}
+
+.avatar {
+	position: absolute;
+	width: 65px;
+	height: 65px;
+	margin: 22px 14px 21px 21px;
+
+	background: #C4C4C4;
+	border-radius: 90px;
+}
+
+.tag-name {
+	position: absolute;
+	width: 81px;
+	height: 27px;
+	margin: 27px 110px 54px 100px;
+
+	font-family: 'Nunito', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 27px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: #000000;
+}
+
+.main-infor {
+	position: absolute;
+	width: 144px;
+	height: 20px;
+	margin: 59px 51px 29px 100px;
+	padding: 0px;
+
+	font-family: Nunito;
+	font-size: 15px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	text-align: left;
+
+	color: #000000;
+}
+
+.button {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	margin: 37px 16px 36px 295px;
+
+	background: #3B82EC;
+	border: 1px solid #A1ACBB;
+	box-sizing: border-box;
+	border-radius: 90px;
+}

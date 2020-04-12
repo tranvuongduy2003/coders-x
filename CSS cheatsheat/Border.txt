@@ -1,0 +1,3 @@
+border-width: 1px
+border-style: solid | dotted | dashed | ...
+boder-color: red

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="new-item" type="text">
+    <button id="add-btn">Add</button>
+    <ul id="todo-list">
+
+    </ul>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var addBtn = document.getElementById('add-btn');
+
+        getValue();
+
+        function getValue() {
+            axios.get('http://localhost:3000/todos')
+             .then(function (response) {
+                 var listItems = response.data;
+                 render(listItems);
+             });
+        }
+
+        addBtn.addEventListener('click', addItem);
+
+        function addItem() {
+            var input = document.getElementById('new-item');
+            var newItem = input.value;
+
+            // axios.post('http://localhost:3000/todos', { content: newItem });
+            // axios.put('http://localhost:3000/todos/2', {
+            //     content: "Go to English class"
+            // })
+            //  .then((response) => {
+            //      console.log(response.data);
+            //  });
+
+            axios.delete('http://localhost:3000/todos/3', {});
+
+            getValue();
+
+            input.value = "";
+        }
+
+        function render(items) {
+            var todoList = document.getElementById('todo-list');
+            var content = items.map(function(item) {
+                return '<li>' + item.content + '</li>';
+            });
+
+            todoList.innerHTML = content.join('');
+        }
+        
+    </script>
+</body>
+
+</html>

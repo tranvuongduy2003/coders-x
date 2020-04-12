@@ -1,0 +1,121 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.padding {
+  display: flex;
+  width: 600px;
+  height: 300px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+}
+
+.intro {
+  width: 50%;
+  height: 100%;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  background-image: url(https://i.pinimg.com/564x/fd/e6/03/fde603acbda0f7f1c2cc806890b68476.jpg);
+  background-size: cover;
+}
+
+.layout {
+  position: relative;
+  height: 100%;
+  background: rgba(47, 83, 215, 0.65);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.question {
+  position: absolute;
+  width: 220px;
+  height: 44px;
+  left: 50%;
+  top: 38%;
+  margin-left: -110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.question .smaller {
+  font-size: 14px;
+}
+
+.button {
+  position: absolute;
+  width: 150px;
+  height: 45px;
+  top: 55%;
+  left: 50%;
+  margin-left: -75px;
+  text-decoration: none;
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(47, 83, 215, 0.8);
+}
+
+.list-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-grow: 1;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.list-content div {
+  padding-top: 20px;
+  color: rgb(47, 83, 215);
+}
+
+.list-content div ul {
+  padding: 0;
+  margin-top: 10%;
+  list-style: none;
+  color: #001E6A;
+}
+
+.list-content div ul a {
+  display: block;
+  width: 100px;
+  height: 35px;
+  text-decoration: none;
+  color: #001A5C;
+  padding-left: 25px;
+}
+
+.list-content .title {
+  padding-left: 25px;
+}
+
+.list-content .apps {
+  grid-row: 1/3;
+  grid-column: 2/3;
+  margin-left: -25px;
+}
+
+.list-content .web {
+  padding-top: 0;
+}
+
+.list-content .apps a {
+  width: 130px;
+}
+
+.list-content div ul a:hover {
+  color: #3561D2;
+}
+
+
+
+

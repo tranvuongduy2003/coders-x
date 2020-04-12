@@ -1,0 +1,24 @@
+ .avatar {
+	width: 128px;
+	height: 128px;
+	margin: 0 12px;
+	background-image: url(./_.jpeg);
+	background-size: cover;
+}
+
+.avatar .overlay {
+	display: flex;
+	height: 100%;
+	color: #FFF;
+	font-size: 50px;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(88,88,88, 45%);
+	opacity: 0;
+}
+
+.avatar:hover .overlay {
+	opacity: 1;
+}
+
+

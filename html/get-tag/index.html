@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document Object</title>
+</head>
+<body>
+    <div>
+        <p>Select the chart you want to modify. The Design tab will appear.</p>
+        <p class="foo">From the Design tab, select the Edit Data command in the Data group.</p>
+        <p>Click the chart again, then select the Switch Row/Column command in the Data group.</p>
+        <p class="foo">The rows and columns will be switched. In our example, the data is now grouped by year, with columns for each genre.</p>
+    </div>
+    <script>
+        var listParagraph = document.getElementsByTagName('p');
+        
+        for (var element of listParagraph) {
+            if (element.getAttribute('class') === 'foo') {
+                element.innerHTML += '<a href="https://coders-x.com/" target="_blank"> coders.tokyo</a>';
+            }
+        }
+    </script>
+</body>
+</html>

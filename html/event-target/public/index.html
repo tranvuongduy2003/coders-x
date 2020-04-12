@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.8.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.8.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.8.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/7.8.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.8.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.8.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+    <input id="new-item" type="text">
+    <button id="add-btn">Add</button>
+    <ul id="todo-list">
+
+    </ul>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var htmlList = document.getElementById('todo-list');
+        var addBtn = document.getElementById('add-btn');
+        
+        var db = firebase.firestore();
+        var storageKey = 'todoList';
+        var stringData = JSON.parse(localStorage.getItem(storageKey));
+        var todoList = [];
+        
+        db.collection("todos").get()
+         .then(function (querySnapshot) {
+            todoList = querySnapshot.docs;
+            render();
+         });
+
+
+        addBtn.addEventListener('click', addItem);
+        htmlList.addEventListener('click', onEventClicked);
+
+
+        function onEventClicked(event){
+            var clickedTarget = event.target;
+            var targetID = clickedTarget.dataset.id;
+            var targetIndex = clickedTarget.dataset.index;
+
+            var cityRef = db.collection('todos').doc(targetID).delete()
+             .then(function() {
+                todoList.splice(targetIndex, 1);
+                render();
+             });
+
+            // todoList.splice(targetId, 1);
+            // localStorage.setItem(storageKey, JSON.stringify(todoList));
+            render();
+        }
+
+        function addItem() {
+            var input = document.getElementById('new-item');
+            var newItem = { content:  input.value };
+
+            db.collection("todos").add(newItem)
+             .then(function(docRef) {
+                return docRef.get();
+             })
+              .then(function(docSnapshot) {
+                todoList.push(docSnapshot);
+                render();
+                input.value = '';
+              })
+        }
+
+        function render() {
+            var gotList = todoList.map((item, index) => {
+                var data = item.data();
+                var todoID = item.id;
+                return '<li>' + data.content + ' <button data-id='+ todoID + ' data-index=' + index + '>Delete</button></li>';
+            });
+
+            htmlList.innerHTML = gotList.join('');
+        }
+
+        render();
+      });
+    </script>
+  </body>
+</html>

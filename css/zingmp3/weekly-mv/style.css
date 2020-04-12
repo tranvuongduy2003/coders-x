@@ -1,0 +1,52 @@
+body {
+	font-family: Nunito, sans-serif;
+}
+
+.weekly-mv {
+	display: flex;
+	padding: 12px;
+	border-bottom: 1px solid #DDD;
+}
+
+.avatar {
+	width: 128px;
+	height: 128px;
+	margin: 0 12px;
+	background-image: url(./artworks-000635242180-ihspcj-t500x500.jpg);
+	background-size: cover;
+}
+
+.avatar .overlay {
+	display: flex;
+	height: 100%;
+	background: linear-gradient(0deg, rgba(0,0,0,0.8533788515406162) 0%, rgba(0,0,0,0) 53%);
+	color: #FFF;
+	align-items: flex-end;
+}
+
+.avatar .number {
+	font-size: 20px;
+	padding: 5px 8px;
+}
+
+.weekly-mv .info {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.weekly-mv .song {
+	font-size: 16px;
+}
+
+.weekly-mv .singer {
+	font-size: 13px;
+	color: #999;
+}
+
+.weekly-mv .listen-count {
+	font-size: 12px;
+	color: #999;
+}
+
+

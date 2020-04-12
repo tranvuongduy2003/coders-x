@@ -1,0 +1,35 @@
+body {
+	font-family: Nunito;
+}
+
+.weekly-song {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #DDD;
+	padding: 10px 0;
+}
+
+.weekly-song .number {
+	font-size: 25px;
+	padding: 0 12px;
+}
+
+.weekly-song .info {
+	flex-grow: 1;
+}
+
+.weekly-song .song {
+	font-size: 17px;
+	margin-bottom: 5px;
+}
+
+.weekly-song .singer {
+	font-size: 12px;
+	color: #999;
+}
+
+.weekly-song .listen-count {
+	font-size: 13px;
+	padding: 0 12px;
+	color: #999;
+}
